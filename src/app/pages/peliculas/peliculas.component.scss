@@ -1,0 +1,101 @@
+:host {
+    display: block;
+    background-color: rgb(77, 72, 72);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    /* Ocupa toda la altura del componente */
+}
+
+//.browse-page{
+//    background-color: black;
+//}
+
+.contenedor {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    background-color: rgb(77, 72, 72);
+}
+
+.peliculas {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.peliculas img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+}
+
+.pie {
+    padding: 20px;
+}
+
+@media (min-width: 768px) {
+    .contenedor {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .peliculas {
+        flex: 1;
+        max-width: 300px;
+        margin-right: 20px;
+        padding-top: 10px;
+    }
+
+    .pie {
+        flex: 1;
+    }
+
+    .pie h2 {
+        font-size: 400x;
+        margin-bottom: 10px;
+    }
+
+    .pie p {
+        font-size: 30px;
+        line-height: 1.6;
+        margin-bottom: 20px;
+    }
+
+    .pie button {
+        font-size: 1.2rem;
+        padding: 10px 20px;
+    }
+}
+
+section {
+    background-size: cover;
+    background-position: center;
+    height: calc(100vh - 80px);
+}
+
+h2 {
+    color: white;
+    font-size: 30px;
+
+}
+
+/* Estilos básicos para el botón */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    background-color: #007bff;
+    border: 1px solid #007bff;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Cambios al pasar el mouse sobre el botón */
+.button:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}

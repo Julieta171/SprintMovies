@@ -1,0 +1,118 @@
+:host {
+  display: block;
+  background-image: url('https://laconexioncosmica.com/wp-content/uploads/2018/04/m42.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  /* Asegura que el fondo cubra toda la altura del componente */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #d42a77, #6a1b9a);
+  /* Gradiente rosa a morado */
+}
+
+.box {
+  width: 100%;
+  max-width: 400px;
+  padding: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.6);
+  /* Fondo semi-transparente oscuro */
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4), 0 4px 8px rgba(0, 0, 0, 0.3);
+  color: #fff;
+  font-family: 'Arial', sans-serif;
+  animation: fadeIn 1s ease-out;
+}
+
+.box:hover {
+  background: rgba(0, 0, 0, 0.8);
+  /* Más oscuro al hacer hover */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5), 0 6px 12px rgba(0, 0, 0, 0.4);
+  transform: translate(-50%, -50%) scale(1.05);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+h1 {
+  color: #3712f3;
+  /* Color dorado para el título */
+  text-transform: uppercase;
+  font-weight: 700;
+  /* Hacer el texto del título más prominente */
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+  /* Tamaño del texto */
+  letter-spacing: 1px;
+  /* Espaciado de letras */
+}
+
+.box input[type="text"],
+.box input[type="password"] {
+  border: 0;
+  background: rgba(255, 255, 255, 0.1);
+  /* Fondo semi-transparente para los campos de entrada */
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #f39c12;
+  /* Borde dorado */
+  padding: 14px 10px;
+  width: 80%;
+  max-width: 280px;
+  outline: none;
+  color: #fff;
+  border-radius: 24px;
+  transition: 0.3s;
+}
+
+.box input[type="text"]:focus,
+.box input[type="password"]:focus {
+  width: 100%;
+  border-color: #e74c3c;
+  /* Rojo brillante al enfocarse */
+  background: rgba(255, 255, 255, 0.2);
+  /* Cambiar el fondo al enfocarse */
+}
+
+.box input[type="submit"] {
+  border: 0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #e74c3c;
+  /* Rojo brillante para el borde */
+  padding: 14px 40px;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  transition: 0.3s;
+  cursor: pointer;
+  background-color: #e74c3c;
+  /* Color de fondo rojo brillante */
+}
+
+.box input[type="submit"]:hover {
+  background: #c0392b;
+  /* Color rojo más oscuro al hacer hover */
+}

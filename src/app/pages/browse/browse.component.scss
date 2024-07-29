@@ -1,0 +1,98 @@
+/* Estilo general del contenedor de la sección */
+// Variables
+// Variables
+
+$background-gradient: linear-gradient(135deg, #d42a77, #6a1b9a);
+$button-hover-color: #c0392b;
+$button-color: #e74c3c;
+$button-text-color: #fff;
+$trailer-button-color: #3498db;
+$trailer-button-hover-color: #2980b9;
+$title-color: #f39c12;
+$container-bg: rgba(0, 0, 0, 0.6);
+$box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+$box-shadow-hover: 0 12px 24px rgba(0, 0, 0, 0.7);
+
+.browse-page {
+  padding: 20px;
+  background: $background-gradient;
+  color: #fff;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.contenedor {
+  display: inline-block;
+  width: 250px; // Ajusta el ancho según sea necesario
+  margin-right: 20px;
+  vertical-align: top;
+  border-radius: 10px;
+  overflow: hidden;
+  background: $container-bg;
+  box-shadow: $box-shadow;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  box-sizing: border-box; // Incluye padding y border en el tamaño total
+
+  &:hover {
+    transform: scale(1.05); // Efecto de escala al pasar el cursor
+    box-shadow: $box-shadow-hover;
+  }
+}
+
+.peliculas {
+  img {
+    width: 100%; // Asegura que la imagen cubra el ancho del contenedor
+    height: auto; // Mantiene la relación de aspecto
+    display: block;
+    object-fit: cover; // Ajusta la imagen para que cubra el contenedor sin distorsionarse
+  }
+}
+
+.pie {
+  padding: 15px;
+
+  h2 {
+    color: $title-color; // Color dorado para los títulos
+    font-size: 1.2rem; // Tamaño de fuente ajustado
+    margin-bottom: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  p {
+    font-size: 0.9rem; // Tamaño de fuente ajustado para descripciones
+    margin-bottom: 15px;
+    line-height: 1.4;
+  }
+
+  button,
+  .button {
+    display: inline-block;
+    margin: 5px;
+    padding: 10px 20px; // Tamaño del botón ajustado
+    border: none;
+    border-radius: 24px;
+    color: $button-text-color;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+
+    &.button {
+      background: $trailer-button-color; // Color azul brillante para el botón de trailer
+      text-decoration: none;
+
+      &:hover {
+        background: $trailer-button-hover-color; // Color azul más oscuro al hacer hover
+      }
+    }
+
+    &:not(.button) {
+      background: $button-color; // Color rojo brillante para otros botones
+
+      &:hover {
+        background: $button-hover-color; // Color rojo más oscuro al hacer hover
+      }
+    }
+  }
+}

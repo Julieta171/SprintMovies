@@ -1,0 +1,223 @@
+// * {
+//     padding: 0;
+//     margin: 0;
+//     text-decoration: none;
+//     list-style: none;
+//     box-sizing: border-box;
+//     --nav: #c63131;
+//     --text-color: white;
+//     --hover: #d8d812;
+//     --mbl-nav-bg: #316b7a;
+//   }
+
+
+//    h2 {
+//     color: white;
+//     font-size: 30px;
+    
+//   }
+  
+//   body {
+//     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+//   }
+  
+//   nav {
+//     background: var(--nav);
+//     height: 80px;
+//     width: 100%;
+//     display: flex;
+//     justify-content: space-between;
+//   }
+  
+//   .logo {
+//     height: 50px;
+  
+//     margin: auto 0 auto 3.7rem;
+//   }
+  
+//   nav ul {
+//     float: right;
+//     margin-right: 3rem;
+//   }
+  
+//   nav ul li {
+//     display: inline-block;
+//     line-height: 80px;
+//     margin-left: 5px;
+//   }
+  
+//   nav ul li a {
+//     color: var(--text-color);
+//     font-size: 17px;
+//     padding: 7px 13px;
+//     border-radius: 4px;
+//     text-transform: uppercase;
+//   }
+  
+//   a.active,
+//   a:hover {
+//     background-color: var(--hover);
+//   }
+  
+//   .checkbtn {
+//     font-size: 30px;
+//     color: var(--text-color);
+//     float: right;
+//     line-height: 80px;
+//     margin-right: 40px;
+//     cursor: pointer;
+//     display: none;
+//   }
+  
+//   #check {
+//     display: none;
+//   }
+  
+//   @media (max-width: 952px) {
+//        .logo  {
+//       height: 40px;
+//       margin: auto 0 auto 1.5rem;
+//        color: white;
+//        font-weight: bold;
+//        font-size: 40px;
+//     }
+//        nav ul li a {
+//      font-size: 15px;
+//      }
+//      nav ul {
+//        margin-right: 1rem;
+//      }
+//    }
+  
+//   @media (max-width: 858px) {
+//      nav {
+//        flex-direction: row-reverse;
+//      }
+//      .checkbtn {
+//       display: block;
+//      }
+  
+//      ul {
+//        position: fixed;
+//        width: 100%;
+//        height: auto;
+//        background: var(--mbl-nav-bg);
+//        top: 80px;
+//        left: 0;
+//      text-align: center;
+//        transition: all 0.5s ease;
+//        border-radius: 0px 0px 30px 30px;
+//        /* clip-path: circle(0% at 92% 0); */
+//        clip-path: inset(0 0 100% 0);
+//        visibility: hidden;
+//      }
+//      nav ul li {
+//        display: block;
+//      margin: 50px 0;
+//       line-height: 30px;
+//      }
+//     nav ul li a {
+//       font-size: 20px;
+//      }
+//      a:hover,
+//      a.active {
+//       background: none;
+//        color: var(--hover);
+//      }
+//      #check:checked ~ ul {
+//     clip-path: inset(0 0 0% 0);      /* clip-path: circle(130% at 50% 0); */
+//       visibility: visible;
+//      }
+//    }
+$header-bg: #2c3e50; // Un color oscuro para el fondo del header
+$header-text-color: #fff; // Color de texto blanco
+$header-padding: 15px; // Padding para el header
+$logo-font-size: 28px; // Tamaño de fuente del logo
+$nav-link-color: #fff; // Color de los enlaces de navegación
+$nav-link-hover-bg: #34495e; // Fondo al pasar el cursor
+$nav-link-padding: 8px 16px; // Padding para los enlaces
+$checkbtn-font-size: 32px; // Tamaño del botón de menú en dispositivos móviles
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+}
+
+header {
+  background-color: $header-bg;
+  color: $header-text-color;
+  padding: $header-padding 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.logo {
+  font-size: $logo-font-size;
+  font-weight: bold;
+}
+
+.checkbtn {
+  font-size: $checkbtn-font-size;
+  display: none;
+  color: $header-text-color;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+
+  li {
+    margin: 0 10px;
+
+    a {
+      color: $nav-link-color;
+      text-decoration: none;
+      padding: $nav-link-padding;
+      border-radius: 5px;
+      transition: background 0.3s ease;
+
+      &.active,
+      &:hover {
+        background-color: $nav-link-hover-bg;
+      }
+    }
+  }
+}
+
+#check:checked~ul {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .checkbtn {
+    display: block;
+  }
+
+  ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: $header-bg;
+
+    li {
+      margin: 10px 0;
+      text-align: center;
+    }
+  }
+}
