@@ -57,7 +57,22 @@ A partir de los detalles y errores observados en los Sprints anteriores, se logr
   Al no comprender del todo los poroblemas, seguir apoyandome de mis compañeros, dividirnos las tarea y explicarnos cualquier detalle, si nos organizamos podemos tener una mejor entrega.
 
     #Resultado Actualizado de lo que estaba realizando
-    
+    <p>Login</p>
+  <img src="login.png" alt="PaginaPrincipal" whith="5vw">
+  Aún falta arreglar el que tome la base de datos y agregar el registro.
+
+   <p>Página de Películas</p>
+  <img src="principal.png" alt="PaginaPrincipal" whith="5vw">
+  Falta ajustar el diseño, realizar las rutas con sus funciones.
+
+ <p>Página de Películas</p>
+  <img src="principal.png" alt="PaginaPrincipal" whith="5vw">
+  Falta ajustar el diseño, realizar las rutas con sus funciones.
+# NOTA IMPORTANTE
+
+* No pude agregar los cambios a mi Repositorio anterior, por eso agregué uno nuevo, me aparece que se hicieron los cambios pero al actualizar no se visualiza nada, una disculpa.
+  
+  
   
 
 
